@@ -56,7 +56,7 @@
         //构造分享内容
         id<ISSContent> publishContent = [ShareSDK content:content//
                                            defaultContent:@"瓜大市场"//
-                                                    image:[ShareSDK imageWithPath:imagePath]
+                                                    image:[ShareSDK imageWithUrl:imagePath]
                                                     title:title//
                                                       url:url//
                                               description:description//
