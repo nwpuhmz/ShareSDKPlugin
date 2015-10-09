@@ -76,7 +76,7 @@
         <header-file src="src/ios/libs/ShareSDK/Extend/WeChatSDK/WXApi.h" />
         <header-file src="src/ios/libs/ShareSDK/Extend/WeChatSDK/WXApiObject.h" />
         <source-file src="src/ios/libs/ShareSDK/Extend/WeChatSDK/libWeChatSDK.a" framework="true" />
-        <source-file src="src/ios/libs/ShareSDK/Extend/WeChatSDK/Resource.bundle" framework="true" />
+        <source-file src="src/ios/libs/ShareSDK/Core/Resource.bundle" framework="true" />
 
         <!-- ShareSDK -->
         <framework src="src/ios/libs/ShareSDK/ShareSDK.framework" custom="true"/>
