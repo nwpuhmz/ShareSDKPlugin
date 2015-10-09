@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:rim="http://www.blackberry.com/ns/widgets"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.scuhmz.cordova.ShareSDK"
+        version="0.0.1">
+
+    <name>ShareSDK</name>
+    <description>A cordova plugin, a JS version of ShareSDK</description>
+    <license>MIT</license>
+    <keywords>cordova,ShareSDK,share</keywords>
+    <repo>https://github.com/nwpuhmz/cordova-plugin-shareSDK.git</repo>
+    <issue>https://github.com/nwpuhmz/cordova-plugin-shareSDK/issues</issue>
+
+    <!-- add this to your config.xml -->
+    <!-- <preference name="WECHATAPPID" value="YOUR_WECHAT_APP_ID_HERE" /> -->
+    <preference name="WECHATAPPID" />
+    <!--require cordova version -->
+    <engines>
+        <engine name="cordova" version=">=3.5.0" />
+    </engines>
+    <!-- js module-->
+    <js-module src="www/sharesdk.js" name="ShareSDK">
+        <clobbers target="ShareSDK" />
+    </js-module>
+
+    <!-- ios -->
+    <platform name="ios">
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="ShareSDK">
+                <param name="ios-package" value="CDVShareSDK"/>
+                <param name="onload" value="true" />
+            </feature>
+            <preference name="WECHATAPPID" value="$WECHATAPPID"/>
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+            <array>
+                <dict>
+                    <key>CFBundleTypeRole</key>
+                    <string>Editor</string>
+                    <key>CFBundleURLName</key>
+                    <string>wechat</string>
+                    <key>CFBundleURLSchemes</key>
+                    <array>
+                        <string>$WECHATAPPID</string>
+                    </array>
+
+                    <key>LSApplicationQueriesSchemes</key>
+                    <array>
+                        <string>weixin</string>
+                        <string>wechat</string>
+                    </array>
+
+                    <key>NSAppTransportSecurity</key>
+                    <dict>
+                        <key>NSAllowsArbitraryLoads</key>
+                        <true/>
+                    </dict>
+                </dict>
+            </array>
+        </config-file>
+
+        <!-- Plugin source code -->
+        <header-file src="src/ios/CDVShareSDK.h" />
+        <source-file src="src/ios/CDVShareSDK.m" />
+
+        <!-- Wechat Official -->
+        <header-file src="src/ios/libs/ShareSDK/Extend/WeChatSDK/WXApi.h" />
+        <header-file src="src/ios/libs/ShareSDK/Extend/WeChatSDK/WXApiObject.h" />
+        <source-file src="src/ios/libs/ShareSDK/Extend/WeChatSDK/libWeChatSDK.a" framework="true" />
+
+        <!-- ShareSDK -->
+        <framework src="src/ios/libs/ShareSDK/ShareSDK.framework" custom="true"/>
+
+        <!-- Other required frameworks -->
+        <framework src="libz.1.2.5.dylib" />
+        <framework src="MessageUI.framework" />
+        <framework src="SystemConfiguration.framework" />
+        <framework src="Security.framework" />
+        <framework src="libstdc++.dylib" />
+        <framework src="QuartzCore.framework" />
+        <framework src="CoreTelephony.framework" />
+        <framework src="libicucore.dylib" />
+        <framework src="JavaScriptCore.framework" />
+        <framework src="CoreText.framework" />
+        <framework src="libsqlite3.dylib" />
+
+
+    </platform>
+
+    <!-- android -->
+
+</plugin>
