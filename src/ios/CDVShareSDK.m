@@ -42,8 +42,9 @@
             NSString *title = [args objectForKey:@"title"];
             NSString *content = [args objectForKey:@"content"];
             NSString *url = [args objectForKey:@"url"];
-            NSString *imagePath = [args objectForKey:@"imageUrl"];
+            NSString *imagePath = [args objectForKey:@"imagePath"];
             NSString *imageNamed = [args objectForKey:@"imageNamed"];
+            NSString *description = [args objectForKey:@"description"];
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         NSLog(@"ipad");
@@ -54,11 +55,11 @@
         NSLog(@"iphone or ipod");
         //构造分享内容
         id<ISSContent> publishContent = [ShareSDK content:content//
-                                           defaultContent:@"分享好东西"//
+                                           defaultContent:@"瓜大市场"//
                                                     image:[ShareSDK imageWithPath:imagePath]
                                                     title:title//
                                                       url:url//
-                                              description:@"分享好东西"//
+                                              description:description//
                                                 mediaType:SSPublishContentMediaTypeNews];
         
         [ShareSDK showShareActionSheet:nil
