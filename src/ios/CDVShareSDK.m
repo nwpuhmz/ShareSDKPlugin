@@ -6,7 +6,7 @@
 //
 //
 
-#import "ShareSdkPlugin.h"
+#import "CDVShareSDK.h"
 #import <ShareSDK/ShareSDK.h>
 #import "WXApi.h"
 @implementation ShareSdkPlugin
