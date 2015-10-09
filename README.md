@@ -33,7 +33,8 @@ Wechat share for iOS ,微信分享
 - QQ share
 - More ShareSDK API
 - for android
-- 
+
+
 ###License
 ----
 
