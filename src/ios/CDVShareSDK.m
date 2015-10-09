@@ -9,7 +9,7 @@
 #import "CDVShareSDK.h"
 #import <ShareSDK/ShareSDK.h>
 #import "WXApi.h"
-@implementation ShareSdkPlugin
+@implementation CDVShareSDK
 #pragma mark "API"
 - (void)pluginInitialize {
     NSString* wechatAppId = [[self.commandDelegate settings] objectForKey:@"wechatappid"];
