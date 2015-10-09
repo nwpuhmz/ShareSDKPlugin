@@ -80,7 +80,7 @@
 
         <!-- ShareSDK -->
         <framework src="src/ios/libs/ShareSDK" custom="true"/>
-       
+        <framework src="src/ios/libs/ShareSDK/ShareSDK.framework" custom="true"/>
 
         
         <!-- Other required frameworks -->
