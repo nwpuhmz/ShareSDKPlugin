@@ -38,10 +38,12 @@
 - (void)share:(CDVInvokedUrlCommand *)command
 {
     
-       NSString* title=[command.arguments objectAtIndex:0];
-    NSString* content=[command.arguments objectAtIndex:1];
-    NSString* url=[command.arguments objectAtIndex:2];
-    NSString* imagePath=[command.arguments objectAtIndex:3];
+        NSMutableDictionary *args = [command.arguments objectAtIndex:0];
+            NSString *title = [args objectForKey:@"title"];
+            NSString *content = [args objectForKey:@"content"];
+            NSString *url = [args objectForKey:@"url"];
+            NSString *imagePath = [args objectForKey:@"imageUrl"];
+            NSString *imageNamed = [args objectForKey:@"imageNamed"];
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         NSLog(@"ipad");
