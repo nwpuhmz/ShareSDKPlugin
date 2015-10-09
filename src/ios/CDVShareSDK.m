@@ -18,10 +18,10 @@
     if(wechatAppId && wechatAppSecret && sharesdkAppId){
        
         /*Share SDK config*/
-        [ShareSDK registerApp:@"aeb210256d6a"];
+        [ShareSDK registerApp:sharesdkAppId];
         
-        [ShareSDK connectWeChatWithAppId:@"wxd00a1114f3a3546c"
-                               appSecret:@"7730ee94ba94e0543447f81882299b37"
+        [ShareSDK connectWeChatWithAppId:wechatAppId
+                               appSecret:wechatAppSecret
                                wechatCls:[WXApi class]];
         
         //连接短信分享
@@ -37,7 +37,7 @@
 }
 - (void)share:(CDVInvokedUrlCommand *)command
 {
-    
+     CDVPluginResult* __block pluginResult = nil;
         NSMutableDictionary *args = [command.arguments objectAtIndex:0];
             NSString *title = [args objectForKey:@"title"];
             NSString *content = [args objectForKey:@"content"];
@@ -72,12 +72,14 @@
                                     if (state == SSResponseStateSuccess)
                                     {
                                         NSLog(@"分享成功");
+                                        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"分享成功"];
                                     }
                                     else if (state == SSResponseStateFail)
                                     {
                                         NSLog(@"分享失败,错误码:%d,错误描述:%@", [error errorCode], [error errorDescription]);
-                                       // [self failWithCallbackID:self.currentCallbackId withError:error];
+                                       pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
                                     }
+                                     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
                                 }];
     }
     
