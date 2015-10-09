@@ -77,7 +77,8 @@
         <header-file src="src/ios/libs/ShareSDK/Extend/WeChatSDK/WXApiObject.h" />
         <source-file src="src/ios/libs/ShareSDK/Extend/WeChatSDK/libWeChatSDK.a" framework="true" />
         <resource-file src="src/ios/libs/ShareSDK/UI/ShareSDKFlatShareViewUI.bundle" />
-        <resource-file src="src/ios/libs/ShareSDK/Core/ShareSDKLocalizable.strings" />
+        <resource-file src="src/ios/libs/ShareSDK/Core/zh-Hans.lproj/ShareSDKLocalizable.strings" />
+        <resource-file src="src/ios/libs/ShareSDK/Core/en.lproj/ShareSDKLocalizable.strings" />
         <resource-file src="src/ios/libs/ShareSDK/Core/Resource.bundle" />
         <resource-file src="src/ios/libs/ShareSDK/Extend/QQConnectSDK/TencentOpenApi_IOS_Bundle.bundle" />
         <!-- Sina Official -->
