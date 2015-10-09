@@ -16,6 +16,8 @@
     <!-- add this to your config.xml -->
     <!-- <preference name="WECHATAPPID" value="YOUR_WECHAT_APP_ID_HERE" /> -->
     <preference name="WECHATAPPID" />
+    <preference name="SHARESDKAPPID" />
+    <preference name="WECHATAPPSECRET" />
     <!--require cordova version -->
     <engines>
         <engine name="cordova" version=">=3.5.0" />
@@ -34,6 +36,9 @@
                 <param name="onload" value="true" />
             </feature>
             <preference name="WECHATAPPID" value="$WECHATAPPID"/>
+            <preference name="SHARESDKAPPID" value="$SHARESDKAPPID"/>
+            <preference name="WECHATAPPSECRET" value="$WECHATAPPSECRET"/>
+
         </config-file>
 
         <config-file target="*-Info.plist" parent="CFBundleURLTypes">
