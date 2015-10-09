@@ -11,7 +11,7 @@
     <license>MIT</license>
     <keywords>cordova,ShareSDK,share</keywords>
     <repo>https://github.com/nwpuhmz/ShareSDKPlugin.git</repo>
-    <issue>https://github.com/nwpuhmz/ShareSDKPluginK/issues</issue>
+    <issue>https://github.com/nwpuhmz/ShareSDKPlugin/issues</issue>
 
     <!-- add this to your config.xml -->
     <!-- <preference name="WECHATAPPID" value="YOUR_WECHAT_APP_ID_HERE" /> -->
