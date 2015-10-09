@@ -106,17 +106,17 @@
         
         <!-- Other required frameworks -->
         <framework src="libz.1.2.5.dylib" />
-        <framework src="MessageUI.framework" weak="true" />
-        <framework src="SystemConfiguration.framework" weak="true"/>
-        <framework src="Security.framework" weak="true" />
+        <framework src="MessageUI.framework" />
+        <framework src="SystemConfiguration.framework"/>
+        <framework src="Security.framework"  />
         <framework src="libstdc++.dylib" />
-        <framework src="QuartzCore.framework" weak="true" />
-        <framework src="CoreTelephony.framework" weak="true" />
+        <framework src="QuartzCore.framework"  />
+        <framework src="CoreTelephony.framework"  />
         <framework src="libicucore.dylib" />
-        <framework src="JavaScriptCore.framework" weak="true" />
-        <framework src="CoreText.framework" weak="true" />
+        <framework src="JavaScriptCore.framework" />
+        <framework src="CoreText.framework"  />
         <framework src="libsqlite3.dylib" />
-        <framework src="ImageIO.framework" weak="true" />
+        <framework src="ImageIO.framework" />
 
     </platform>
 
