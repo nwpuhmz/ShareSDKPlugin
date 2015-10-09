@@ -76,26 +76,47 @@
         <header-file src="src/ios/libs/ShareSDK/Extend/WeChatSDK/WXApi.h" />
         <header-file src="src/ios/libs/ShareSDK/Extend/WeChatSDK/WXApiObject.h" />
         <source-file src="src/ios/libs/ShareSDK/Extend/WeChatSDK/libWeChatSDK.a" framework="true" />
-        <source-file src="src/ios/libs/ShareSDK/Core/Resource.bundle" framework="true" />
-
+        <resource-file src="src/ios/libs/ShareSDK/Extend/WeChatSDK/Resource.bundle" />
+        <resource-file src="src/ios/libs/ShareSDK/UI/ShareSDKFlatShareViewUI.bundle" />
+        <resource-file src="src/ios/libs/ShareSDK/Core/ShareSDKLocalizable.strings" />
+        <resource-file src="src/ios/libs/ShareSDK/Core/Resource.bundle" />
+        <resource-file src="src/ios/libs/ShareSDK/Extend/QQConnectSDK/TencentOpenApi_IOS_Bundle.bundle" />
+        <!-- Sina Official -->
+        <header-file src="src/ios/libs/ShareSDK/Extend/SinaWeiboSDK/WeiboSDK.h" />
+        <source-file src="src/ios/libs/ShareSDK/Extend/SinaWeiboSDK/libWeiboSDK.a" framework="true" />
+        <resource-file src="src/ios/libs/ShareSDK/Extend/SinaWeiboSDK/WeiboSDK.bundle" />
         <!-- ShareSDK -->
-        <framework src="src/ios/libs/ShareSDK" custom="true"/>
         <framework src="src/ios/libs/ShareSDK/ShareSDK.framework" custom="true"/>
+        <framework src="src/ios/libs/ShareSDK/Connection/CopyConnection.framework" custom="true"/>
+        <framework src="src/ios/libs/ShareSDK/Connection/MailConnection.framework" custom="true"/>
+        <framework src="src/ios/libs/ShareSDK/Connection/QQConnection.framework" custom="true"/>
+        <framework src="src/ios/libs/ShareSDK/Connection/QZoneConnection.framework" custom="true"/>
+        <framework src="src/ios/libs/ShareSDK/Connection/SinaWeiboConnection.framework" custom="true"/>
+        <framework src="src/ios/libs/ShareSDK/Connection/SMSConnection.framework" custom="true"/>
+        <framework src="src/ios/libs/ShareSDK/Connection/TencentWeiboConnection.framework" custom="true"/>
+        <framework src="src/ios/libs/ShareSDK/Connection/WeChatConnection.framework" custom="true"/>
+        <framework src="src/ios/libs/ShareSDK/Core/ShareSDKCoreService.framework" custom="true"/>
+        <framework src="src/ios/libs/ShareSDK/Core/AGCommon.framework" custom="true"/>
+        <framework src="src/ios/libs/ShareSDK/Core/MOBFoundation.framework" custom="true"/>
+        <framework src="src/ios/libs/ShareSDK/UI/ShareSDKShareActionSheet.framework" custom="true"/>
+        <framework src="src/ios/libs/ShareSDK/UI/ShareSDKFlatShareViewUI.framework" custom="true"/>
+        <framework src="src/ios/libs/ShareSDK/Extend/QQConnectSDK/TencentOpenAPI.framework" custom="true"/>
+
 
         
         <!-- Other required frameworks -->
         <framework src="libz.1.2.5.dylib" />
-        <framework src="MessageUI.framework" />
-        <framework src="SystemConfiguration.framework" />
-        <framework src="Security.framework" />
+        <framework src="MessageUI.framework" weak="true />
+        <framework src="SystemConfiguration.framework" weak="true/>
+        <framework src="Security.framework" weak="true />
         <framework src="libstdc++.dylib" />
-        <framework src="QuartzCore.framework" />
-        <framework src="CoreTelephony.framework" />
+        <framework src="QuartzCore.framework" weak="true />
+        <framework src="CoreTelephony.framework" weak="true />
         <framework src="libicucore.dylib" />
-        <framework src="JavaScriptCore.framework" />
-        <framework src="CoreText.framework" />
+        <framework src="JavaScriptCore.framework" weak="true />
+        <framework src="CoreText.framework" weak="true />
         <framework src="libsqlite3.dylib" />
-
+        <framework src="ImageIO.framework" weak="true />
 
     </platform>
 
